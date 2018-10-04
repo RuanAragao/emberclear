@@ -119,7 +119,11 @@ Acceptance Tests:
 
 Merge Coverage:
   stage: build
-  dependencies: [ test ]
+  dependencies:
+    - Acceptance Tests
+    - Integration Tests
+    - Helper Tests
+    - Unit Tests
   script:
     - time ./run yarn merge-coverage
   artifacts:
@@ -166,7 +170,8 @@ Deploy Production:
 Report:
   stage: deploy
   only: [ master ]
-  dependencies: [ build ]
+  dependencies:
+    - Merge Coverage
   script:
     - mv ${CI_PROJECT_DIR}/packages/frontend/coverage public/
   artifacts:
