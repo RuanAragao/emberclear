@@ -63,9 +63,10 @@ module.exports = function(defaults) {
       strip: isProduction
     },
 
-    // sourcemaps: {
-    //   enabled: false
-    // },
+    sourcemaps: {
+      enabled: !isProduction,
+      extensions: 'js'
+    },
 
     // autoprefixer: { sourcemap: false },
 
