@@ -171,7 +171,6 @@ module.exports = function(defaults) {
   app.import('node_modules/bulma/bulma.sass');
   app.import('node_modules/bulma-toast/dist/bulma-toast.min.js');
   app.import('vendor/shims/bulma-toast.js');
-  app.import('node_modules/bulma-toast/dist/bulma-toast.min.css');
 
   return mergeTrees([
     app.toTree(),

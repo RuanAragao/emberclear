@@ -2814,7 +2814,7 @@ broccoli@^1.1.0:
     tmp "0.0.31"
     underscore.string "^3.2.2"
 
-broccoli@^2.0.0:
+broccoli@^2.0.0-beta.3:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/broccoli/-/broccoli-2.0.0.tgz#7b95d6173865184697e4dab9f477591057b9410e"
   dependencies:
@@ -9708,6 +9708,22 @@ sane@^2.5.2:
     anymatch "^2.0.0"
     capture-exit "^1.2.0"
     exec-sh "^0.2.0"
+    fb-watchman "^2.0.0"
+    micromatch "^3.1.4"
+    minimist "^1.1.1"
+    walker "~1.0.5"
+    watch "~0.18.0"
+  optionalDependencies:
+    fsevents "^1.2.3"
+
+sane@^3.0.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/sane/-/sane-3.1.0.tgz#995193b7dc1445ef1fe41ddfca2faf9f111854c6"
+  dependencies:
+    anymatch "^2.0.0"
+    capture-exit "^1.2.0"
+    exec-sh "^0.2.0"
+    execa "^1.0.0"
     fb-watchman "^2.0.0"
     micromatch "^3.1.4"
     minimist "^1.1.1"
