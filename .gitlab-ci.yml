@@ -52,7 +52,7 @@ variables:
 before_script:
   - time ./run yarn install
 
-List JS/TS:
+Lint JS/TS:
   stage: quality
   dependencies: [ setup ]
   script:
