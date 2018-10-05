@@ -1,12 +1,11 @@
 import Ember from 'ember';
 import Service from '@ember/service';
-import { service } from '@ember-decorators/service';
 import { isPresent } from '@ember/utils';
+
+import { toast } from "bulma-toast";
 
 
 export default class Toast extends Service {
-  @service('notification-messages') notifications;
-
   info(msg: string, title = '', options = {}) {
     this.createToast('info', msg, title, options);
   }
@@ -26,12 +25,14 @@ export default class Toast extends Service {
   createToast(status: string, msg: string, title: string, options: any) {
     const message = isPresent(title) ? `${title}: ${msg}` : msg;
 
-    this.notifications.addNotification({
-      autoClear: true,
-      clearDuration: Ember.testing ? 10 : 4000,
-      ...options,
-      message: message || '',
-      type: status
+    toast({
+      message,
+      type: `is-${status}`,
+      dismissable: true,
+      duration: Ember.testing ? 10 : 4000000,
+      position: 'top-right',
+      pauseOnHover: true,
+      opacity: 1
     });
   }
 }

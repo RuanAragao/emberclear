@@ -126,10 +126,10 @@ Merge Coverage:
     - Unit Tests
   script:
     - time ./run yarn merge-coverage
+    - cat ${CI_PROJECT_DIR}/packages/frontend/coverage/coverage-summary.json
   artifacts:
     paths:
       - ${CI_PROJECT_DIR}/packages/frontend/coverage/
-      - cat ${CI_PROJECT_DIR}/packages/frontend/coverage/coverage-summary.json
 
 Build Production:
   stage: build

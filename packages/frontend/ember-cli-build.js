@@ -176,11 +176,5 @@ module.exports = function(defaults) {
   return mergeTrees([
     app.toTree(),
     qrScannerWorker
-    // new BroccoliCSSBlocks(app.path, {
-    //   entry: ['app'],
-    //   output: "src/ui/styles/css-blocks.css"
-    // })
-    // app.toTree()
-    // fontTree, fontStyleTree
   ]);
 };
